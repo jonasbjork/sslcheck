@@ -8,12 +8,14 @@
     Copyright: 2014, Jonas Björk
 """
 import socket, ssl
+import yaml
 
 """ Change this list to test your own sites. """
-sites = [
-    'www.jonasbjork.net',
-    'www.google.com'
-]
+
+with open('sites.yaml', 'r') as f:
+    ysites = yaml.load(f)
+
+sites = ysites['sites']
 
 def check_ssl(host, port=443):
     """ The function that checks the target site for SSL cert. """

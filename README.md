@@ -22,20 +22,27 @@ Check if SSL certificates on list of sites are valid or not.
 ## Dependencies
 
 The `AllCA.pem` file is the root certificates (CA) needed to test for
-certificate validity. ([https://gist.github.com/caleb-vear/8274254#file-allca-pem|source] of file)
+certificate validity. (source: https://gist.github.com/caleb-vear/8274254#file-allca-pem )
 
 Python modules: `socket` and `ssl` which should be distributed with 
 your Python version (>2.6).
 
+You need the YAML module for Python to use the `sites.yaml` listing file. Installation 
+in MacOSX 10.10 is done with `brew` ( http://brew.sh/ ):
+
+```bash
+brew install libyaml
+sudo python -m easy_install pyyaml
+```
+
 ## Function
 
-You add a list of domains to check SSL on in the `sites`-list:
+You add a list of domains to check SSL on in the `sites.yaml`-file:
 
-```python
-sites = [
-	'www.jonasbjork.net',
-	'www.google.com'
-]
+```yaml
+sites:
+  - www.jonasbjork.net
+  - www.google.com
 ```
 
 Execute the script: `python sslcheck.py`. The script exits with `0` if 
