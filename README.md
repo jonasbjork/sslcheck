@@ -38,6 +38,6 @@ sites = [
 ]
 ```
 
-Execute the script: `python sslcheck.py`. The script exits with 0 if 
-everything is OK, else it exits with 1.
+Execute the script: `python sslcheck.py`. The script exits with `0` if 
+everything is OK, else it exits with `1`.
 
