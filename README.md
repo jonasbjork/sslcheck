@@ -1,7 +1,7 @@
 sslcheck
 ========
-Author : Jonas Björk <jonas.bjork@gmail.com>
-Date   : 2014
+Author : Jonas Björk <jonas.bjork@gmail.com><br />
+Date   : 2014<br />
 License: GNU GPLv2
 
 Check if SSL certificates on list of sites are valid or not.
@@ -31,10 +31,12 @@ your Python version (>2.6).
 
 You add a list of domains to check SSL on in the `sites`-list:
 
-	sites = [
-    	'www.jonasbjork.net',
-    	'www.google.com'
-	]
+```python
+sites = [
+	'www.jonasbjork.net',
+	'www.google.com'
+]
+```
 
 Execute the script: `python sslcheck.py`. The script exits with 0 if 
 everything is OK, else it exits with 1.
